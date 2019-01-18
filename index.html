@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Text Shadow Animation-like</title>
+  </head>
+
+  <body>
+    <div id="wrapper"><h1>Ghost Ghost</h1></div>
+
+    <script>
+      const header = document.getElementsByTagName("h1")[0];
+
+      function shadow(e) {
+        // this formula is NOT a constant. Depends on the element's margin, padding, text length ...
+        const pixelsX = Math.ceil(((e.x / this.offsetWidth) * 10 - 12) * 5);
+        const pixelsY = Math.ceil(((e.y / this.offsetHeight) * 10 - 5) * 5);
+        header.style.textShadow = `${pixelsX}px ${pixelsY}px 0px rgba(186, 218, 85, 0.5)`;
+      }
+
+      header.addEventListener("mousemove", shadow);
+    </script>
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+      }
+      
+      #wrapper {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+      
+      h1 {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 4vw;
+        color: white;
+        text-shadow: 10px 10px rgba(186, 218, 85, 0.5);
+        margin: 0;
+        padding: 10%;
+        height: 10%;
+        width: 23%;
+      }
+    </style>
+  </body>
+</html>
