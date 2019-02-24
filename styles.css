@@ -1,0 +1,27 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  color: white;
+  text-shadow: 10px 10px rgba(186, 218, 85, 0.5);
+  margin: 0;
+  padding: 10%;
+  height: 10%;
+  width: 23%;
+}
